@@ -7,6 +7,6 @@ var router = express.Router();
 //   res.send("Kamu lagi di lists");
 // });
 
-router.get("/", getList);
+router.post("/", getList);
 
 module.exports = router;

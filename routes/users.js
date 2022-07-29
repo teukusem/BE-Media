@@ -7,7 +7,7 @@ const { getUser, deleteUser } = require("../controllers/user");
 //   res.send("respond with a resource");
 // });
 
-router.get("/", getUser);
+router.post("/", getUser);
 router.delete("/delete/:id", deleteUser);
 
 module.exports = router;

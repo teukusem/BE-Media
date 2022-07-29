@@ -4,6 +4,8 @@ const bcrypt = require("bcrypt");
 
 exports.getList = async (req, res) => {
   try {
+    console.log("pint");
+    console.log(req.body.point.length);
     let where = {};
 
     if (req.body.type.length > 0)
@@ -24,7 +26,7 @@ exports.getList = async (req, res) => {
       limit: req.body.size,
       offset: (req.body.page - 1) * req.body.size,
     });
-    console.log(req.body.range);
+
     res.status(200).send({
       status: "Success",
       message: "Get Users Success",
